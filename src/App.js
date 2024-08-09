@@ -1,5 +1,5 @@
 import React from "react";
-import DrumMachine from "./DrumMachine"; // Ensure the correct path
+import DrumMachine from "./DrumMachine";
 import "./App.css";
 
 function App() {
