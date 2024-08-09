@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
     return (
         <div
-            className="App"
+            className="App max-w-screen-md mx-auto"
             id="drum-machine">
             <DrumMachine />
         </div>

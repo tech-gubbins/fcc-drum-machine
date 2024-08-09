@@ -35,7 +35,7 @@ const DrumPad = ({ padKey, id, sound, label, setDisplay, volume, power }) => {
   }, [padKey, volume, power]);
 
   return (
-    <div className="drum-pad" id={id} onClick={playSound}>
+    <div className="drum-pad bg-gray-700 text-white p-4 rounded-lg shadow-md hover:bg-gray-600 focus:outline-none" id={id} onClick={playSound}>
       {padKey}
       <audio ref={audioRef} id={padKey} src={`sounds/${sound}`} className="clip" />
     </div>
