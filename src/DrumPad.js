@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 
+// React Component for individual drum pads
 const DrumPad = ({ padKey, id, sound, label, setDisplay, volume, power }) => {
     const audioRef = useRef(null);
 
     const playSound = () => {
+        // Check if power switch is 'off', return early if set to 'off'
         if (!power) return;
 
         const audio = audioRef.current;
@@ -17,7 +19,8 @@ const DrumPad = ({ padKey, id, sound, label, setDisplay, volume, power }) => {
                 console.error("Error playing sound:", error);
             });
 
-            setDisplay(label); // Update the display with the sound label
+            // Update the display with the sound label
+            setDisplay(label); 
         }
     };
 
@@ -28,6 +31,7 @@ const DrumPad = ({ padKey, id, sound, label, setDisplay, volume, power }) => {
             }
         };
 
+        // Handle event listeners
         document.addEventListener("keydown", handleKeyPress);
         return () => {
             document.removeEventListener("keydown", handleKeyPress);
@@ -41,7 +45,7 @@ const DrumPad = ({ padKey, id, sound, label, setDisplay, volume, power }) => {
             onClick={playSound}
             aria-label={`Play sound for ${padKey}`}
             role="button"
-            tabIndex="0" // Allows div to be focusable for keyboard users
+            tabIndex="0"
         >
             <span className="text-lg font-bold">{padKey}</span>
             <audio
