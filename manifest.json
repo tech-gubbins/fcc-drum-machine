@@ -1,0 +1,9 @@
+{
+  "short_name": "Drum Machine",
+  "name": "Create with Drum Machine",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
